@@ -91,6 +91,8 @@ def insertletter(letter,position):
         position=input("please re enter the valid position:")
         insertletter(letter,position)
 
+
+
 player='0'
 computer='x'
 def playermove():
