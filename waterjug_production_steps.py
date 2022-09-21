@@ -34,8 +34,8 @@ while(True):
             X=X+Y
             Y=0
         elif(choice==6):
-            X=0
             Y=X+Y
+            X=0
         elif(choice==7):
             Y=Y-(jug1-X)
             X=jug1
