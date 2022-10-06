@@ -88,8 +88,9 @@ def insertletter(letter,position):
 
     else:
         print("cann't insert the element")
-        position=input("please re enter the valid position:")
+        position=int(input("please re enter the valid position:"))
         insertletter(letter,position)
+        return
 
 
 
