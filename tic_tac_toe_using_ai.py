@@ -39,7 +39,7 @@ def checkforwin():
     else:
         return False
 
-def checkwhichmaxkwon(mark):
+def checkwhichmarkwon(mark):
     if(board[1]==board[2] and board[1]==board[3] and board[1]==mark):
         return True
     elif(board[1]==board[4] and board[1]==board[7] and board[1]==mark):
@@ -117,9 +117,9 @@ def computermove():
 
 
 def minimax(board,depth,ismaximizing):
-    if(checkwhichmaxkwon(computer)):
+    if(checkwhichmarkwon(computer)):
         return 1
-    elif(checkwhichmaxkwon(player)):
+    elif(checkwhichmarkwon(player)):
         return -1
     elif(checkdraw()):
         return 0
@@ -129,7 +129,7 @@ def minimax(board,depth,ismaximizing):
         for key in board.keys():
             if(board[key]==' '):
                 board[key]=computer
-                score=minimax(board,0,False)
+                score=minimax(board,depth+1,False)
                 board[key]=' '
                 if(score>bestscore):
                     bestscore=score
@@ -139,7 +139,7 @@ def minimax(board,depth,ismaximizing):
         for key in board.keys():
             if(board[key]==' '):
                 board[key]=computer
-                score=minimax(board,0,True)
+                score=minimax(board,depth+1,True)
                 board[key]=' '
                 if(score<bestscore):
                     bestscore=score
