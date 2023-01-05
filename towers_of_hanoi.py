@@ -8,6 +8,6 @@ def tower_of_hanoi(n,source,auxiliary,destination):
 if __name__=='__main__':
     number_of_rings=int(input("Enter number of rings:"))
     tower_of_hanoi(number_of_rings,"A","B","c")
-    
+     
 
     
